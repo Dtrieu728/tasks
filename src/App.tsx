@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import logo from ".\\GD7I9K3XwAApR08.jpg";
+import logo from "./Images\\GD7I9K3XwAApR08.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
