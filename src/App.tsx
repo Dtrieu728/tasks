@@ -34,7 +34,7 @@ function App(): JSX.Element {
                     <Col>
                         <div
                             style={{
-                                width: 25,
+                                width: 30,
                                 height: 100,
                                 backgroundColor: "#FF0000"
                             }}
@@ -43,7 +43,7 @@ function App(): JSX.Element {
                     <Col>
                         <div
                             style={{
-                                width: 25,
+                                width: 30,
                                 height: 100,
                                 backgroundColor: "#FF0000"
                             }}
