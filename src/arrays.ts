@@ -46,9 +46,15 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const NoDollas = amounts.map((int: string): number =>
+        int.includes("$")
+            ? ((int = int.slice(1)), isNaN(Number(int)) ? 0 : Number(int))
+            : isNaN(Number(int))
+            ? 0
+            : Number(int)
+    );
+    return NoDollas;
 };
-
 /**
  * Consume an array of messages and return a new list of the messages. However, any
  * string that ends in "!" should be made uppercase. Also, remove any strings that end
