@@ -25,6 +25,9 @@ export function bookEndList(numbers: number[]): number[] {
 export function tripleNumbers(numbers: number[]): number[] {
     const triple = numbers.map((num: number): number => num * 3);
     return triple;
+    /**
+     * Testing function
+     */
 }
 
 /**
