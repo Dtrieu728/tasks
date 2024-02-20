@@ -124,14 +124,26 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const sum = 0;
-    const clone = [];
-    if (values.every((val: number): boolean => val > 0)) {
-        const sum = values.reduce(
-            (total: number, val: number) => total + val,
-            0
-        );
-        const clone = [...values, sum];
+    const clone: number[] = [...values];
+    let NegativeFound = false;
+    const firstNegativeIndex = values.findIndex(
+        (val: number): boolean => val < 0
+    );
+    const postive = values.filter((val: number): boolean => {
+        if (val < 0) {
+            NegativeFound = true;
+        }
+        return !NegativeFound;
+    });
+    const sum: number = postive.reduce(
+        (total: number, pos: number) => (total += pos),
+        0
+    );
+    if (firstNegativeIndex === -1) {
+        clone.splice(values.length, 0, sum);
+    } else {
+        clone.splice(firstNegativeIndex + 1, 0, sum);
     }
-    return [];
+
+    return clone;
 }
