@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import { Question, QuestionType } from "./interfaces/question";
 
 /**
@@ -101,8 +102,8 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    question.name = newName;
-    return question;
+    const newQuest = { ...question, name: newName };
+    return newQuest;
 }
 
 /**
@@ -111,7 +112,11 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const newPublish = { ...question };
+    newPublish.published
+        ? (newPublish.published = false)
+        : (newPublish.published = true);
+    return newPublish;
 }
 
 /**
