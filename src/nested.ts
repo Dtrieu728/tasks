@@ -169,8 +169,10 @@ export function addNewQuestion(
     type: QuestionType
 ): Question[] {
     const blankQuestion = makeBlankQuestion(id, name, type);
-    const NewQuestions = [...questions, blankQuestion];
-    return NewQuestions;
+    const NewQuestions = questions.map(
+        (question: Question): Question => ({ ...question })
+    );
+    return [...NewQuestions, blankQuestion];
 }
 
 /***
@@ -183,7 +185,13 @@ export function renameQuestionById(
     targetId: number,
     newName: string
 ): Question[] {
-    return [];
+    const NewQuestionList = questions.map(
+        (question: Question): Question => ({
+            ...question,
+            name: question.id === targetId ? newName : question.name
+        })
+    );
+    return NewQuestionList;
 }
 
 /***
