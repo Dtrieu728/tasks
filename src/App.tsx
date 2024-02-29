@@ -13,9 +13,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
                 <span style={{ color: "blue" }}>Dustine Trieu</span>
-                <Button onClick={() => console.log("Hello World!")}>
-                    Log Hello World
-                </Button>
             </header>
             <hr></hr>
             <Counter></Counter>
