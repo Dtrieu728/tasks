@@ -18,7 +18,6 @@ export function ChangeType(): JSX.Element {
     return (
         <>
             <div>
-                current type : <span>{quizType}</span>
                 <Button onClick={handleChangeType}>Change Type</Button>
             </div>
             <div>
