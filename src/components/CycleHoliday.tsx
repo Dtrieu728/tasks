@@ -21,10 +21,10 @@ const HolidayDates: Record<Holiday, Holiday> = {
     VernalEquinoxDay: "DragonBoatFestival",
     DragonBoatFestival: "Christmas",
     Christmas: "NewYear"
+=================================
 
+================================
 
-
-    
 };
 */
 type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
