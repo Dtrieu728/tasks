@@ -37,4 +37,5 @@ export function StartAttempt(): JSX.Element {
             </div>
         </>
     );
+    return <div>Start Attempt</div>;
 }

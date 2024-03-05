@@ -6,7 +6,6 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
-//button where?
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -26,6 +25,10 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
+            <p>
+                Edit <code>src/App.tsx</code> and save. This page will
+                automatically reload.
+            </p>
         </div>
     );
 }
