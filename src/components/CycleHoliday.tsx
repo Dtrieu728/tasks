@@ -1,48 +1,22 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-/*
-type Holiday =
-    | "Tet"
-    | "Christmas"
-    | "DragonBoatFestival"
-    | "VernalEquinoxDay"
-    | "NewYear";
 
-const HolidayAlpha: Record<Holiday, Holiday> = {
-    Christmas: "DragonBoatFestival",
-    DragonBoatFestival: "NewYear",
-    NewYear: "Tet",
-    Tet: "VernalEquinoxDay",
-    VernalEquinoxDay: "Christmas"
-};
-const HolidayDates: Record<Holiday, Holiday> = {
-    NewYear: "Tet",
-    Tet: "VernalEquinoxDay",
-    VernalEquinoxDay: "DragonBoatFestival",
-    DragonBoatFestival: "Christmas",
-    Christmas: "NewYear"
-
-
-    
-    
-};
-*/
-type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
-const HolidayAlpha: Record<Holiday, Holiday> = {
-    "🎄": "🐉",
-    "🐉": "🥂",
-    "🥂": "🀄",
-    "🀄": "☀️",
-    "☀️": "🎄"
-};
-const HolidayDates: Record<Holiday, Holiday> = {
-    "🥂": "🀄",
-    "🀄": "☀️",
-    "☀️": "🐉",
-    "🐉": "🎄",
-    "🎄": "🥂"
-};
 export function CycleHoliday(): JSX.Element {
+    type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
+    const HolidayAlpha: Record<Holiday, Holiday> = {
+        "🎄": "🐉",
+        "🐉": "🥂",
+        "🥂": "🀄",
+        "🀄": "☀️",
+        "☀️": "🎄"
+    };
+    const HolidayDates: Record<Holiday, Holiday> = {
+        "🥂": "🀄",
+        "🀄": "☀️",
+        "☀️": "🐉",
+        "🐉": "🎄",
+        "🎄": "🥂"
+    };
     const [holiday, setHoliday] = useState<Holiday>("🀄");
     return (
         <div>
