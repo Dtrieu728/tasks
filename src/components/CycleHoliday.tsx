@@ -23,26 +23,23 @@ const HolidayDates: Record<Holiday, Holiday> = {
     Christmas: "NewYear"
 };
 */
+type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
+const HolidayAlpha: Record<Holiday, Holiday> = {
+    "🎄": "🐉",
+    "🐉": "🥂",
+    "🥂": "🀄",
+    "🀄": "☀️",
+    "☀️": "🎄"
+};
+const HolidayDates: Record<Holiday, Holiday> = {
+    "🥂": "🀄",
+    "🀄": "☀️",
+    "☀️": "🐉",
+    "🐉": "🎄",
+    "🎄": "🥂"
+};
 export function CycleHoliday(): JSX.Element {
-    type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
-
     const [holiday, setHoliday] = useState<Holiday>("🀄");
-
-    const HolidayAlpha: Record<Holiday, Holiday> = {
-        "🎄": "🐉",
-        "🐉": "🥂",
-        "🥂": "🀄",
-        "🀄": "☀️",
-        "☀️": "🎄"
-    };
-    const HolidayDates: Record<Holiday, Holiday> = {
-        "🥂": "🀄",
-        "🀄": "☀️",
-        "☀️": "🐉",
-        "🐉": "🎄",
-        "🎄": "🥂"
-    };
-
     return (
         <div>
             <div>
@@ -54,7 +51,7 @@ export function CycleHoliday(): JSX.Element {
                         Advance by Year
                     </Button>
                 </div>
-                <div>{holiday}</div>
+                <div>Holiday: {holiday}</div>
             </div>
         </div>
     );
