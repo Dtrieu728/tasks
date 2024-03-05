@@ -24,8 +24,9 @@ const HolidayDates: Record<Holiday, Holiday> = {
 };
 */
 export function CycleHoliday(): JSX.Element {
-    const [holiday, setHoliday] = useState<Holiday>("🀄");
     type Holiday = "🀄" | "🎄" | "🐉" | "☀️" | "🥂";
+
+    const [holiday, setHoliday] = useState<Holiday>("🀄");
 
     const HolidayAlpha: Record<Holiday, Holiday> = {
         "🎄": "🐉",
@@ -46,14 +47,14 @@ export function CycleHoliday(): JSX.Element {
         <div>
             <div>
                 <Button onClick={() => setHoliday(HolidayAlpha[holiday])}>
-                    <Button onClick={() => setHoliday(HolidayDates[holiday])}>
-                        Advance by Date
-                    </Button>
                     Advance by Alphabet
                 </Button>
                 <div>
-                    <span>{holiday}</span>
+                    <Button onClick={() => setHoliday(HolidayDates[holiday])}>
+                        Advance by Year
+                    </Button>
                 </div>
+                <div>{holiday}</div>
             </div>
         </div>
     );
