@@ -12,6 +12,3 @@ export function RevealAnswer(): JSX.Element {
         </div>
     );
 }
-export function RevealAnswer(): JSX.Element {
-    return <div>Reveal Answer</div>;
-}
