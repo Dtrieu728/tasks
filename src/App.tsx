@@ -19,7 +19,7 @@ function App(): JSX.Element {
                 <span style={{ color: "blue" }}>Dustine Trieu</span>
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
