@@ -28,9 +28,13 @@ export function ChangeColor(): JSX.Element {
                     type="radio"
                     id={`color-${color}`}
                     label={color}
-                    style={{ color: color }}
                     checked={selectedColor === color}
                     onChange={() => handleColorChange(color)}
+                    style={{
+                        backgroundColor: color,
+                        color: "white",
+                        marginRight: "10px"
+                    }}
                 />
             ))}
             <div
@@ -45,6 +49,18 @@ export function ChangeColor(): JSX.Element {
                     alignItems: "center"
                 }}
             >
+                {selectedColor ? "on" : "Select a color"}
+                <div>
+                    {selectedColor && (
+                        <p>
+                            You hvae chosen {""}
+                            <span style={{ color: selectedColor }}>
+                                {selectedColor}
+                            </span>
+                            .
+                        </p>
+                    )}
+                </div>
                 <span style={{ color: "white" }}>{selectedColor}</span>
             </div>
         </div>
