@@ -37,4 +37,5 @@ export function TwoDice(): JSX.Element {
             {die1 === die2 && die1 !== 1 && <p>You Win!</p>}
         </div>
     );
+    return <div>Two Dice</div>;
 }
